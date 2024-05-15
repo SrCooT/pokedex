@@ -4,7 +4,7 @@ import "./pokemons.css";
 
 const Pokemon = (props) => {
     const [showDetails, setShowDetails] = useState(false);
-    const { pokemon } = props;
+    const {pokemon} = props;
 
     return (
         <Link
@@ -24,7 +24,6 @@ const Pokemon = (props) => {
                 <div>#{pokemon && pokemon.id}</div>
             </div>
             <div className="pokemon-type">
-                <p>
                 {pokemon.types.map((type, index) => {
                     return (
                     <div key={index} className="pokemon-type-text">
@@ -32,7 +31,7 @@ const Pokemon = (props) => {
                     </div>
                     );
                 })}
-                </p>
+                
             </div>
             </div>
         </div>

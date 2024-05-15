@@ -1,6 +1,7 @@
 .header-painel-pokemons{
     display: flex;
     justify-content: center;
+    
 }
 .painel-pokemons{
   display: flex;
@@ -8,6 +9,7 @@
     gap: 5px;
     justify-content: center;
     align-items: center;
+    width: 800px;
 }
 
 .loading-pokemons{

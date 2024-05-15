@@ -3,6 +3,7 @@ import { Home } from "../home";
 import { PokemonDetails } from "../../components/infoPokemons/infoPokemon";
 import { ThemeProvider } from "../../components/themesPages/themePage";
 
+
 const AppRoutes = () => (
     <ThemeProvider>
         <Routes>

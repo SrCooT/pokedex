@@ -1,12 +1,21 @@
 .card-pokemon{
     display: flex;
-    width: 250px;
+    justify-content: center;
+    width: 220px;
     height: 100px;
     border: 1px solid black;
     border-radius: 3px;
 }
+.card-pokemon:hover{
+    padding: 0px 0px 2px 0px;
+    box-shadow: 5px 10px;
+    background-color: var(color-bg);
+    transition: 0.5s;
+    width: 300px;
+    height: 100%;
+}
 .img-card-pokemon{
-    padding: 0px 5px;
+    padding: 0px 2px;
 }
 
 .img-card-pokemon img{
@@ -23,16 +32,20 @@
     justify-content: space-between;
     padding: 10px 10px 10px 0px;
     flex: 1;
+
 }
 .top-card{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
 }
 
 .top-card h3{
     text-transform: capitalize;
+    padding-right: 4px;
+    
 }
 
 .pokemon-type{
@@ -40,9 +53,11 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    color: var();
     
 }
 .pokemon-type-text{
     margin-right: 10px;
     text-transform: capitalize;
+    
 }

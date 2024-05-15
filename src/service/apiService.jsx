@@ -9,7 +9,7 @@ const getPokemonList = async (pokemon) => {
     }
 };
 
-const getPokemon = async (limit = 100, offset = 0) => {
+const getPokemon = async (limit = 50, offset = 0) => {
     try {
         const response = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`);
         return response.data;

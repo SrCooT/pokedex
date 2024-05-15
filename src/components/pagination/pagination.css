@@ -1,0 +1,11 @@
+.loading-pokemons{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.loading-pokemons .seta:hover{
+    box-shadow: 2px 2px 0px 2px blue;
+    background-color: brown;
+}

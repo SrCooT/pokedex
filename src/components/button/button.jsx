@@ -1,14 +1,15 @@
 import { useContext } from 'react';
-import { ThemePage } from './../themesPages/themePage';
+import { ThemeContext } from './../themesPages/themePage';
+
 
 
 export const Button =(props) => {
 
-    const { theme } = useContext(ThemePage)
+    const { theme } = useContext(ThemeContext);
 
         return(
         <button {...props} 
-        style={{color: theme.color, backgroundColor: theme.background}}
+            style={{ color: theme.color, backgroundColor: theme.background}}
         />
         )
 }

@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { getPokemonList } from "../../service/apiService";
 
+
 const PokemonDetails = () => {
     const { pokemonId } = useParams();
     console.log( pokemonId);
@@ -33,10 +34,10 @@ const PokemonDetails = () => {
                 {pokemonData && (
                     <div className='card-info-pokemon'>
                         <h2>{pokemonData.name}</h2>
-                        <img src={pokemonData.image} alt={pokemonData.name} />
-                        <p>Type: {pokemonData.type}</p>
-                        <p>Moves: {pokemonData.moves.join(', ')}</p>
-                        <p>Abilities: {pokemonData.abilities.join(', ')}</p>
+                        <img src={pokemonData.image} alt={pokemonData.name}  className='img-pokemon'/>
+                        <p className='types-pokemon'>Type: {pokemonData.type}</p>
+                        <p className='moves'>Moves: {pokemonData.moves.join(', ')}</p>
+                        <p className='habilit-pokemon'>Abilities: {pokemonData.abilities.join(', ')}</p>
                     </div>
                 )}
                 <Link to="/">Back</Link>
