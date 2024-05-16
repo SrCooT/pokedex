@@ -21,9 +21,9 @@
     "navigate-pokemon navigate-pokemon";
   row-gap: 1rem;
   background-color: #050505;
-  background: linear-gradient(135deg,#ffdb73 0%, 
+  background: linear-gradient(20deg,#ffdb73 0%, 
   #ffdb73 40%, 
-  #c88422 50%, 
+  #c88422 60%, 
   #6a3406 100%);
 }
 .card-info-pokemon:hover {
@@ -100,8 +100,8 @@
   border-radius: 30px;
 }
 .status-ponts-barra {
-  animation: increaseWidth 10s ease-in-out 2s infinite alternate;
-  transition: width 2s ease-in-out;
+  animation: increaseWidth 10s ease-out 2s infinite alternate;
+  transition: width 0.1s ease-in-out;
 }
 .back {
   color: black;
@@ -117,8 +117,8 @@
     background-color: #94f8ba85;
   }
   60% {
-    width: 60%;
-    background-color: #bcf485;
+    width: 30%;
+    background-color: #7ae410;
   }
   100% {
     width: 50%;

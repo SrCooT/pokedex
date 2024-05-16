@@ -43,7 +43,7 @@
     };
     useEffect(() => {
         RefreshPokemons();
-    }, [page]);
+    },[page]);
 
     const onSearchHandler = async (pokemon) => {
         if (!pokemon) {
