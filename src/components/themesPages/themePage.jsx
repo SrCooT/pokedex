@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 export const themes = {
   dark: {
     color: "#000000",
-    background: "#fff",
+    background: "#05c2",
   },
   white: {
     color: "#ffffff",
@@ -17,7 +17,7 @@ export const ThemeContext = createContext({});
 export const ThemeProvider = (props) => {
   const { children } = props;
 
-  const [theme, setTheme] = useState("white");
+  const [theme, setTheme] = useState("dark");
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>

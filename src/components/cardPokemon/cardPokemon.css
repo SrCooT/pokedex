@@ -1,18 +1,25 @@
-.header-painel-pokemons{
+    .header-painel-pokemons {
     display: flex;
     justify-content: center;
+    }
+
     
-}
-.painel-pokemons{
-  display: flex;
+    .painel-pokemons {
+    border: 10px double black;
+    background: radial-gradient(circle, 
+    #dabf9f 10%, 
+    #f0b772 95%, 
+    rgb(155, 121, 58) 10%) ;
+    padding: 40px;
+    display: flex;
     flex-wrap: wrap;
     gap: 5px;
     justify-content: center;
     align-items: center;
     width: 800px;
-}
+    }
 
-.loading-pokemons{
+    .loading-pokemons {
     display: flex;
     justify-content: end;
-}
+    }

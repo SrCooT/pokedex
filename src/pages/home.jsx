@@ -65,9 +65,9 @@
 
     return (
         <ThemeProvider>
-        <div className={theme === 'white' ? 'dark' : 'white'}>
         <GlobalStyle />
         <ThemeTogglerButton />
+        <div style={{ color: theme.color, backgroundColor: theme.background}}>
             <NavBar />
             <SearchBar onSearch={onSearchHandler} />
             {notFound ? (

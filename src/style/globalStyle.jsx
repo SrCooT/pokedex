@@ -6,17 +6,19 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: "Overpass";
+  
   }
 
   body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--color-bg);
-    color: var(--color-text-primary);
+    
+   
   }
 
   :root {
+
     --color-bg-dark: rgb(161, 157, 219);
     --color-text-primary-dark: #000;
     

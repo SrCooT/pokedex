@@ -5,7 +5,7 @@ import "./pokemons.css";
 const Pokemon = (props) => {
     const [showDetails, setShowDetails] = useState(false);
     const {pokemon} = props;
-
+    console.log(pokemon);
     return (
         <Link
         to={`/infoPokemons/${pokemon.id}`}
