@@ -1,30 +1,35 @@
-import { createContext, useState } from "react";
-import PropTypes from "prop-types";
 
-export const themes = {
-  dark: {
-    color: "#000000",
-    background: "#05c2",
-  },
-  white: {
-    color: "#ffffff",
-    background: "#000",
-  },
+import  { createContext, useState } from 'react';
+
+const ThemeContext = createContext();
+
+const themes = {
+    light: {
+        name:'light',
+        color: '#fff',
+        background: "rgb(19,19,19,82)"
+    },
+    dark: {
+        name: 'dark',
+        color: '#000',
+        background: "rgb(34,193,195)",
+        
+    }
+
 };
 
-export const ThemeContext = createContext({});
+const ThemeProvider = ({children}) => {
+    const [theme, setTheme] = useState(themes.light);
 
-export const ThemeProvider = (props) => {
-  const { children } = props;
+    const toggleTheme = () => {
+        setTheme((prevTheme) => (prevTheme.name === 'light' ? themes.dark : themes.light));
+    };
 
-  const [theme, setTheme] = useState("dark");
-
-  return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
-      {children}
-    </ThemeContext.Provider>
-  );
+    return (
+        <ThemeContext.Provider value={{ theme, toggleTheme }}>
+            {children}
+        </ThemeContext.Provider>
+    );
 };
-ThemeProvider.propTypes = {
-  children: PropTypes.node.isRequired,
-};
+
+export { ThemeProvider, ThemeContext };

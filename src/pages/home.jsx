@@ -1,17 +1,17 @@
-    import { GlobalStyle } from "../style/globalStyle";
+    import './css/home.css'
     import { CardPokemon } from "../components/cardPokemon/cardPokemon";
     import { Footer } from "../components/footer/footer";
     import { SearchBar } from "../components/searchBar/searchBar";
-    import { ThemeTogglerButton } from "./../components/theme-button/theme-toggler-button";
-    import { ThemeProvider, ThemeContext} from "./../components/themesPages/themePage";
+    import { ThemeContext} from "./../components/themesPages/themePage";
     import {
     getPokemon,
     getPokemonData,
     getPokemonList,
-    } from "../service/apiService";
-
+    } from "./../service/apiService";
     import NavBar from "./../components/navBar/navBar";
     import { useContext, useEffect, useState } from "react";
+
+
 
 
     const Home = () => {
@@ -43,31 +43,35 @@
     };
     useEffect(() => {
         RefreshPokemons();
-    },[page]);
+    }, [page]);
 
     const onSearchHandler = async (pokemon) => {
         if (!pokemon) {
-        return getPokemon();
+            return RefreshPokemons();
         }
 
         setLoading(true);
         setNotFound(false);
-        const result = await getPokemonList(pokemon);
-        if (!result) {
-        setLoading(false);
-        setNotFound(true);
-        } else {
-        setPokemons([result]);
+        try {
+            const result = await getPokemonList(pokemon.toLowerCase());
+            if (!result) {
+                setNotFound(true);
+                setPokemons([]);
+            } else {
+                setPokemons([result]);
+                setNotFound(false);
+            }
+        } catch (error) {
+            console.error("Search Error", error);
+            setNotFound(true);
+            setPokemons([]);
+        } finally {
+            setLoading(false);
         }
-        setLoading(false);
-        setNotFound(false);
     };
 
     return (
-        <ThemeProvider>
-        <GlobalStyle />
-        <ThemeTogglerButton />
-        <div style={{ color: theme.color, backgroundColor: theme.background}}>
+        <div className="pageFull" style={{ color: theme.color, backgroundColor: theme.background}}>
             <NavBar />
             <SearchBar onSearch={onSearchHandler} />
             {notFound ? (
@@ -83,7 +87,6 @@
             )}
             <Footer />
             </div>
-        </ThemeProvider>
     );
     };
 

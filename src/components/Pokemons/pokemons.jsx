@@ -5,7 +5,7 @@ import "./pokemons.css";
 const Pokemon = (props) => {
     const [showDetails, setShowDetails] = useState(false);
     const {pokemon} = props;
-    console.log(pokemon);
+    
     return (
         <Link
         to={`/infoPokemons/${pokemon.id}`}
@@ -14,7 +14,7 @@ const Pokemon = (props) => {
         <div className="card-pokemon">
             <div className="img-card-pokemon">
             <img
-                src={pokemon && pokemon.sprites.front_default}
+                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`}
                 alt={pokemon && pokemon.name}
             />
             </div>

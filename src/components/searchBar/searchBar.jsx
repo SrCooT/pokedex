@@ -4,13 +4,14 @@
 
     const SearchBar = (props) => {
     const [search, setSearch] = useState("dito");
-    const {onSearch} = props
+    const {onSearch} = props;
     const onChangeHandler = (e) => {
         setSearch(e.target.value)
-        if(e.target.value.lenght === 0){
-            onSearch(undefined)
+        if(e.target.value.length === 0){
+            onSearch(undefined);
         }
-    }
+    };
+
 
     const onButtonClickHandler = () => {
         onSearch(search);
@@ -25,6 +26,8 @@
         <div className="searchbar-btn">
             
             <button onClick={onButtonClickHandler}>Buscar</button>
+        
+
         </div>
 
     </div>

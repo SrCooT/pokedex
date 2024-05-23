@@ -1,11 +1,13 @@
 import "./infoPokemon.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import { getPokemonList } from "../../service/apiService";
-import { ThemeProvider } from "../themesPages/themePage";
+import { ThemeContext} from "../themesPages/themePage";
 import { ThemeTogglerButton } from "../theme-button/theme-toggler-button";
+import { Footer } from "../footer/footer";
 
 const PokemonDetails = () => {
+  const { theme } = useContext(ThemeContext);
   const { pokemonId } = useParams();
   const [pokemonData, setPokemonData] = useState(null);
 
@@ -34,22 +36,36 @@ const PokemonDetails = () => {
     fetchData();
   }, [pokemonId]);
 
+  const getStatusColor = (name) => {
+    switch (name.toLowerCase()) {
+        case "hp":
+            return "red";
+        case "attack":
+            return "blue";
+        case "defense":
+            return "green";
+        case "speed":
+            return "purple";
+        default:
+            return "gray";
+    }
+};
+
   return (
-   
-    <ThemeProvider>
-     <div className="">
+
+     <div  style={{ color: theme.color, backgroundColor: theme.background}}>
       
       <div className="info-pokemon-card" >
+<ThemeTogglerButton  className="button"/>
         {pokemonData && (
           <div className="card-info-pokemon">
-            <ThemeTogglerButton />
                 <div className="img-pokemon">
-              <img
-                src={pokemonData.image}
+              
+               <a href="https://www.youtube.com/watch?v=-PlAg8R9TG4&ab_channel=AshKetchum" target="_blank" > <img src={pokemonData.image}
                 alt={pokemonData.name}
                 
                 
-                />
+                /></a>
                 </div>
             <h2>{pokemonData.name}</h2>
             <p className="types-pokemon">Type: {pokemonData.type}</p>
@@ -60,16 +76,25 @@ const PokemonDetails = () => {
             <div className="status">Stats:</div>
           
             {pokemonData.stats.map((stat) => (
-              <p key={stat.name}   >
-                {stat.name}:<span className="status-ponts"><span className="status-ponts-barra">{stat.base_stat}</span></span>
-              </p>
+               <div className="status-ponts" key={stat.name}>
+               <div
+                   className="status-ponts-barra"
+                   style={{
+                       width: `${stat.base_stat}%`,
+                       backgroundColor: getStatusColor(stat.name),
+                   }}
+               />
+               <span className="status-label">
+                   {stat.name}: {stat.base_stat}
+               </span>
+           </div>
             ))}
           </div>
         )}
         <Link to="/" className="back">Back</Link>
+        <Footer/>
       </div>
     </div>
-        </ThemeProvider>
   );
 };
 

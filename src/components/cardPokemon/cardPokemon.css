@@ -1,8 +1,22 @@
+.header-pokemon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    ;
+}
+    
+    
+    
     .header-painel-pokemons {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: end;
     }
 
+    .header-painel-pokemons > h1 {
+        padding: 20px;
+    }
     
     .painel-pokemons {
     border: 10px double black;
@@ -22,4 +36,10 @@
     .loading-pokemons {
     display: flex;
     justify-content: end;
+    }
+
+    .button-tema{
+        border: 1px solid black;
+        
+        
     }

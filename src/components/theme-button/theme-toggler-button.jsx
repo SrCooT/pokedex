@@ -1,18 +1,28 @@
-import { useContext } from "react"
-import { ThemeContext,  themes } from "./../themesPages/themePage"
-import { Button } from "../button/button";
+import  { useContext, useState } from 'react';
+import { ThemeContext } from '../themesPages/themePage';
+import sol from '../imagen/sol.png';
+import lua from '../imagen/lua.png';
+import "./theme-toggler-buton.css";
 
-export const ThemeTogglerButton = () =>{
 
-    const { theme , setTheme } = useContext(ThemeContext)
+const ThemeTogglerButton = () => {
+    const { theme, toggleTheme } = useContext(ThemeContext);
+    const [DarkTheme, setDarkTheme] = useState(theme.name  === 'dark');
 
-    
+
+        const handleClick = () => {
+            toggleTheme();
+            setDarkTheme(!DarkTheme);
+                };
+
     return (
-        <div>
-                <Button onClick={() => {
-                    console.log("Tema atual:", theme)
-                    setTheme(theme === themes.white ? themes.dark : themes.white)}}>Clique aqui </Button>
-                
-        </div>
-    )
-}
+        <button className='button' onClick={handleClick}>
+           <img
+            src={DarkTheme ? sol : lua}
+            alt={DarkTheme ? 'Lua'  : 'Sol'}
+           className='theme-icon'/>
+        </button>
+    );
+};
+
+export { ThemeTogglerButton };

@@ -1,6 +1,7 @@
 import "./cardPokemon.css";
 import { Pokemon } from "../Pokemons/pokemons";
 import  Pagination from "../pagination/pagination";
+import { ThemeTogglerButton } from "../theme-button/theme-toggler-button";
 
 const CardPokemon = (props) => {
     const { pokemons, loading , page, setPage, totalPages} =props;
@@ -16,9 +17,12 @@ const CardPokemon = (props) => {
         };
     }
     return (
-        <div>
+        <div className=" header-pokemon">
             <div className="header-painel-pokemons">
                 <h1>CooTDex</h1>
+                <div className="button-tema">
+                <ThemeTogglerButton /> 
+                </div>
             </div>
             <div>
                 {loading ? (
