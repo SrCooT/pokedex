@@ -9,7 +9,8 @@
 ##  Funcionalidades da aplicação entregue
 
 - <strong>Busca de Pokémon</strong>: Permite buscar Pokémons pelo nome.
-- <Strong>Visualização de Lista de Pokémons</Strong>: Exibe uma lista paginada de Pokémons com imagens e nomes.
+
+- <Strong>Visualização dos Pokémons</Strong>: Exibe um botao de carregar mais que adiciona mais  10 pokemon na  lista  com imagens e nomes.
 
 - <strong>Detalhes do Pokémon</strong>: clicar em um Pokémon da lista, o usuário é encaminhado a uma página com informações detalhadas sobre aquele Pokémon específico.
   Paginação: Navegação entre páginas de Pokémons.

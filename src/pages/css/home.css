@@ -1,8 +1,22 @@
-*{
-    margin: 0;
-    padding: 0;   
-}
-.pageFull{
-    height: 100vh;
+    * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+    }
 
-}
+    .load-more-buttons  {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 20px;
+    }
+    .load-more-buttons > button {
+        background-color: rgb(222, 215, 247);
+        border: none;
+        border-radius: 10px;
+        height: 44px;
+        color: rgb(55, 42, 42);
+        padding: 10px 12px;
+        cursor: pointer;
+
+    }

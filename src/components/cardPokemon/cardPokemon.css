@@ -1,8 +1,15 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
 .header-pokemon {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 
 .header-painel-pokemons {
@@ -30,6 +37,9 @@
   justify-content: center;
   align-items: center;
   max-width: 800px;
+  opacity: 1; 
+  transition: opacity 5.5s ease;
+  
 }
 
 .loading-pokemons {
@@ -39,4 +49,5 @@
 
 .button-tema {
   border: 1px solid black;
+  
 }
