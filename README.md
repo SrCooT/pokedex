@@ -21,6 +21,8 @@
 - <strong>Alerta Interativo</strong>: Exibe um alerta ao clicar na imagem do Pokémon.
 
 ## Ferramentas utilizadas
+  <strong>Vite</strong>: utilizado para iniciar o projeto. 
+  
   <strong>React</strong>: Escolhido pela sua eficiência na construção de interfaces de usuário dinâmicas e reutilizáveis.
 
   <strong>React Router</strong>: Utilizado para gerenciar a navegação entre as páginas da aplicação de forma simples e eficiente.
@@ -31,11 +33,12 @@
 
   <strong>PokeAPI</strong>: API utilizada para obter os dados dos Pokémons, por ser uma fonte abrangente e bem documentada de informações sobre Pokémons.
 
+
  ## Decisões adotadas durante o planejamento e execução do desafio
   <strong>Utilização do Context API</strong>: Para gerenciar o estado do tema globalmente, permitindo alternar facilmente entre temas claro e escuro.
 
-  <strong>Componentização</strong>: O projeto foi dividido em componentes reutilizáveis (como Button, CardPokemon, Pagination), para melhorar a organização do código e facilitar a manutenção.
+  <strong>Componentização</strong>: O projeto foi dividido em componentes reutilizáveis (como Button, CardPokemon, infoPokemons...), para melhorar a organização do código e facilitar a manutenção.
 
- <strong>Paginização de Dados</strong>: Implementado para melhorar a performance da aplicação ao lidar com uma grande quantidade de dados da API.
+ <strong>Carregamento de Dados</strong>: Implementado para melhorar a performance da aplicação ao lidar com uma grande quantidade de dados da API.
 
   <strong>Loading</strong>: Adicionadas para informar o usuário, enquanto busca a informações, melhorando a experiência do usuário durante a espera por dados.
