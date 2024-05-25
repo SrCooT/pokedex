@@ -2,11 +2,11 @@
 
 <img src='./src/components/imagen/Captura de tela 2024-05-24 213855.png'>
 
-## Breve descrição do propósito da aplicação
+##  propósito da aplicação
 
    <p> CooTDex(pokedex) é uma aplicação web projetada para oferecer aos usuários uma experiência interativa na exploração e busca de informações sobre Pokémons. A aplicação permite visualizar detalhes de cada Pokémon, incluindo suas habilidades, movimentos e estatísticas, tudo isso com uma interface amigável e personalizável através de temas.</p>
 
-## Breve descrição das funcionalidades da aplicação entregue
+##  Funcionalidades da aplicação entregue
 
 - <strong>Busca de Pokémon</strong>: Permite buscar Pokémons pelo nome.
 - <Strong>Visualização de Lista de Pokémons</Strong>: Exibe uma lista paginada de Pokémons com imagens e nomes.
