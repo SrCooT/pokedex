@@ -1,11 +1,16 @@
-.loading-pokemons{
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
+.loading-Seta {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  border: none;
+}
+.pagination-button {
+  border: none;
+  height: 100%;
+  cursor: pointer;
 }
 
-.loading-pokemons .seta:hover{
-    box-shadow: 2px 2px 0px 2px blue;
-    background-color: brown;
+.pagination-button:hover {
+  background-color: brown;
 }

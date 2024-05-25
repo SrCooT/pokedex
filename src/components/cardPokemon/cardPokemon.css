@@ -1,45 +1,42 @@
-.header-pokemon{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    ;
+.header-pokemon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-    
-    
-    
-    .header-painel-pokemons {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    }
 
-    .header-painel-pokemons > h1 {
-        padding: 20px;
-    }
-    
-    .painel-pokemons {
-    border: 10px double black;
-    background: radial-gradient(circle, 
-    #dabf9f 10%, 
-    #f0b772 95%, 
-    rgb(155, 121, 58) 10%) ;
-    padding: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    justify-content: center;
-    align-items: center;
-    width: 800px;
-    }
+.header-painel-pokemons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
 
-    .loading-pokemons {
-    display: flex;
-    justify-content: end;
-    }
+.header-painel-pokemons > h1 {
+  padding: 20px;
+}
 
-    .button-tema{
-        border: 1px solid black;
-        
-        
-    }
+.painel-pokemons {
+  border: 10px double black;
+  background: radial-gradient(
+    circle,
+    #dabf9f 10%,
+    #f0b772 95%,
+    rgb(155, 121, 58) 10%
+  );
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+}
+
+.loading-pokemons {
+  display: flex;
+  justify-content: end;
+}
+
+.button-tema {
+  border: 1px solid black;
+}

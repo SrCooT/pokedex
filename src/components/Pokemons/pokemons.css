@@ -1,63 +1,62 @@
-.card-pokemon{
-    display: flex;
-    justify-content: center;
-    width: 220px;
-    height: 100px;
-    border: 1px solid black;
-    border-radius: 3px;
+.card-pokemon {
+  display: flex;
+  justify-content: center;
+  width: 220px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 3px;
 }
-.card-pokemon:hover{
-    padding: 0px 0px 2px 0px;
-    box-shadow: 5px 10px;
-    background-color: var(color-bg);
-    transition: 0.5s;
-    width: 250px;
-    height: 100%;
+.card-pokemon:hover {
+  padding: 0px 0px 2px 0px;
+  box-shadow: 5px 10px;
+  background-color: var(color-bg);
+  transition: 0.5s;
+  width: 250px;
+  height: 100%;
 }
-.img-card-pokemon{
-    padding: 0px 2px;
+.img-card-pokemon {
+  padding: 0px 2px;
 }
 
-.img-card-pokemon img{
-    margin-top:5px ;
-    width: 100px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    
+.img-card-pokemon img {
+  margin-top: 5px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
 }
-.body-card{
+.body-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 10px 10px 0px;
+  flex: 1;
+}
+@media (max-width: 330px) {
+  .body-card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 10px 10px 10px 0px;
-    flex: 1;
-
+  }
 }
-.top-card{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
+.top-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.top-card h3{
-    text-transform: capitalize;
-    padding-right: 4px;
-    
+.top-card h3 {
+  text-transform: capitalize;
+  padding-right: 4px;
 }
 
-.pokemon-type{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    color: var();
-    
+.pokemon-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
-.pokemon-type-text{
-    margin-right: 10px;
-    text-transform: capitalize;
-    
+.pokemon-type-text {
+  margin-right: 10px;
+  text-transform: capitalize;
 }

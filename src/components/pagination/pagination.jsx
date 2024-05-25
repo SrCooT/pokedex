@@ -1,14 +1,18 @@
-import './pagination.css'
+import "./pagination.css";
 
-const Pagination = (props) => {
-    const {page, totalPages , onLeftClick, onRightClick} = props
-    return (
-        <div className="loading-pokemons">
+// eslint-disable-next-line react/prop-types
+const Pagination = ({ page, totalPages, onLeftClick, onRightClick }) => (
+  <div className="loading-Seta">
+    <button onClick={onLeftClick} className="pagination-button">
+      ⬅️
+    </button>
+    <div>
+      {page} de {totalPages}
+    </div>
+    <button onClick={onRightClick} className="pagination-button">
+      ➡️
+    </button>
+  </div>
+);
 
-                <button onClick={onLeftClick}><div className='seta'>⬅️</div></button>
-                <div>{page} de {totalPages}</div>
-                <button onClick={onRightClick}><div className='seta'>➡️</div></button>
-        </div>
-    )
-}
-export  default Pagination ;
+export default Pagination;

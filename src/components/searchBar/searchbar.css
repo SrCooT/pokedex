@@ -1,16 +1,13 @@
-
 .container-searchBar {
     display: flex;
     margin: 0px auto;
     padding: 0 20px;
     align-items: center;
     justify-content: center;
-    
 }
 .searchbar {
     margin-right: 15px;
-    padding-top: 20px;
-
+    padding-top: auto;
     
 }
 
@@ -18,14 +15,14 @@
     padding: 10px;
     box-shadow: 0px 2px 2px rgb(0, 0, 0, 0.25);
     border-radius: 110px;
-    
-}
-.searchbar-btn  button{
+    cursor: pointer;
+    }
+.searchbar-btn button {
     background-color: rgb(222, 215, 247);
     border: none;
     border-radius: 10px;
     height: 44px;
     color: rgb(55, 42, 42);
     padding: 10px 12px;
+    cursor: pointer;
 }
-
